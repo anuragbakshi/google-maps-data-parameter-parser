@@ -2,6 +2,8 @@
 
 **A JavaScript parser for the Protocol Buffer implementation used for the 'data' parameter in google maps URLs.**
 
+This is a fork of a great [david-r-edgar/google-maps-data-parameter-parser](https://github.com/david-r-edgar/google-maps-data-parameter-parser). Only thing I've done is to make a package out of it that can be used in other projects. Much more can be done with it.
+
 ## Demo test page
 
 See examples of what this library does at the [demonstration test page](http://loughrigg.org/gmdp/test/).
@@ -23,7 +25,9 @@ The meaning of an element depends on these properties, as well as the element's 
 
 ## Dependencies
 
-* jquery
+Runtime: **None!**
+
+Development: `jest` for testing
 
 ## Functionality
 
@@ -32,15 +36,7 @@ The parser extracts the data parameter and forms it into a tree of nodes, each r
 ## Usage
 
 ### Creation
-```
-var parsedProtocolBuffer = PrBufNode.create(url);
+```javascript
+const data = new Gmdp(url);
 ```
 
-### Traversal
-```
-for (directChild of parsedProtocolBuffer.getChildren()) {
-    console.log(directChild.id(),
-                directChild.type(),
-                directChild.value());
-}
-```
