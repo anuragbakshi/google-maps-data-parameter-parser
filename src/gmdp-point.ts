@@ -1,6 +1,6 @@
-const GmdpPoint = function(lat, lng) {
+const GmdpPoint = function (lat, lng) {
     this.lat = lat;
     this.lng = lng;
-}
+};
 
 module.exports = GmdpPoint;

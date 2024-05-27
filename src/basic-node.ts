@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @param {string|null} val
@@ -26,7 +26,7 @@ const BasicNode = function (val = null) {
     this.setParentNode = function (node) {
         this.parent = node;
         node.children[node.children.length] = this;
-    }
+    };
 
     /**
      * Gets the parent node of this node.
@@ -34,7 +34,7 @@ const BasicNode = function (val = null) {
      */
     this.getParentNode = function () {
         return this.parent;
-    }
+    };
 
     /**
      * Adds a child node of this node.
@@ -43,7 +43,7 @@ const BasicNode = function (val = null) {
     this.addChild = function (node) {
         node.parent = this;
         this.children[this.children.length] = node;
-    }
+    };
 
     /**
      * Gets the array of child nodes of this node.
@@ -51,7 +51,7 @@ const BasicNode = function (val = null) {
      */
     this.getChildren = function () {
         return this.children;
-    }
+    };
 
     /**
      * Removes all the children of this node.
@@ -61,7 +61,7 @@ const BasicNode = function (val = null) {
             child.parent = null;
         }
         this.children = [];
-    }
+    };
 
     /**
      * Recursively counts the number of all descendants, from children down, and
@@ -73,7 +73,7 @@ const BasicNode = function (val = null) {
             count += child.getTotalDescendantCount();
         }
         return count + this.children.length;
-    }
+    };
 };
 
 module.exports = BasicNode;
