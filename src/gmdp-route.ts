@@ -1,4 +1,4 @@
-const GmdpWaypoint = require("./gmdp-waypoint");
+import { GmdpWaypoint } from "./gmdp-waypoint";
 /**
  * Represents a basic route, comprised of an ordered list of
  * GmdpWaypoint objects.

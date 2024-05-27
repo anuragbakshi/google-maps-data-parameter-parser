@@ -1,6 +1,6 @@
 const PrBufNode = require("./prbufnode");
-const GmdpPoint = require("./gmdp-point");
-const GmdpWaypoint = require("./gmdp-waypoint");
+import { GmdpPoint } from "./gmdp-point";
+import { GmdpWaypoint } from "./gmdp-waypoint";
 const GmdpRoute = require("./gmdp-route");
 
 import { GmdpException } from "./gmdp-exception";

@@ -1,6 +1,3 @@
-const GmdpPoint = function (lat, lng) {
-    this.lat = lat;
-    this.lng = lng;
-};
-
-module.exports = GmdpPoint;
+export class GmdpPoint {
+    constructor(private lat: number, private lng: number) {}
+}
