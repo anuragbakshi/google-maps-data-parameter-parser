@@ -1,4 +1,4 @@
-const BasicNode = require("../src/basic-node");
+import { BasicNode } from "../src/basic-node";
 
 const parentNode = new BasicNode();
 const childNode1 = new BasicNode();

@@ -1,4 +1,4 @@
-const BasicNode = require("./basic-node");
+import { BasicNode } from "./basic-node";
 
 /**
  * Protocol Buffer implementation, which extends the functionality of Node
