@@ -1,79 +1,60 @@
-"use strict";
+export class BasicNode {
+    children: BasicNode[] = [];
+    parent?: BasicNode;
 
-/**
- * @param {string|null} val
- * @constructor
- */
-const BasicNode = function (val = null) {
-    /**
-     * @type {string}
-     */
-    this.val = val;
-    /**
-     * @type {BasicNode[]}
-     */
-    this.children = [];
-    /**
-     *
-     * @type {BasicNode|null}
-     */
-    this.parent = null;
+    constructor(private val?: string) {}
 
     /**
      * Sets the parent node of this node.
-     * @param {BasicNode} node
      */
-    this.setParentNode = function (node) {
+    setParentNode(node: BasicNode) {
         this.parent = node;
         node.children[node.children.length] = this;
-    };
+    }
 
     /**
      * Gets the parent node of this node.
-     * @returns {BasicNode|null}
      */
-    this.getParentNode = function () {
+    getParentNode() {
         return this.parent;
-    };
+    }
 
     /**
      * Adds a child node of this node.
-     * @param {BasicNode} node
      */
-    this.addChild = function (node) {
+    addChild(node: BasicNode) {
         node.parent = this;
         this.children[this.children.length] = node;
-    };
+    }
 
     /**
      * Gets the array of child nodes of this node.
-     * @returns {BasicNode[]}
      */
-    this.getChildren = function () {
+    getChildren() {
         return this.children;
-    };
+    }
 
     /**
      * Removes all the children of this node.
      */
-    this.removeChildren = function () {
+    removeChildren() {
         for (let child of this.children) {
-            child.parent = null;
+            delete child.parent;
         }
+
         this.children = [];
-    };
+    }
 
     /**
      * Recursively counts the number of all descendants, from children down, and
      * returns the total number.
      */
-    this.getTotalDescendantCount = function () {
+    getTotalDescendantCount() {
         let count = 0;
         for (let child of this.children) {
             count += child.getTotalDescendantCount();
         }
-        return count + this.children.length;
-    };
-};
 
-module.exports = BasicNode;
+        return count + this.children.length;
+    }
+}
