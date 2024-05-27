@@ -2,7 +2,8 @@ const PrBufNode = require("./prbufnode");
 const GmdpPoint = require("./gmdp-point");
 const GmdpWaypoint = require("./gmdp-waypoint");
 const GmdpRoute = require("./gmdp-route");
-const GmdpException = require("./gmdp-exception");
+
+import { GmdpException } from "./gmdp-exception";
 
 /**
  * Represents a google maps data parameter, constructed from the passed URL.

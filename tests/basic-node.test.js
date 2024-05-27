@@ -1,4 +1,4 @@
-const BasicNode = require('../src/basic-node');
+const BasicNode = require("../src/basic-node");
 
 const parentNode = new BasicNode();
 const childNode1 = new BasicNode();
@@ -12,23 +12,22 @@ test("Expects node to be ", () => {
     expect(childNode1).toBeInstanceOf(BasicNode);
 });
 
-test('Expects parent node to match', () => {
+test("Expects parent node to match", () => {
     expect(childNode1.getParentNode()).toBe(parentNode);
 });
 
-test('Expect parent node to have 2 children', () => {
+test("Expect parent node to have 2 children", () => {
     expect(parentNode.getChildren().length).toBe(2);
 });
-test('Expect child node to have 1 child', () => {
+test("Expect child node to have 1 child", () => {
     expect(childNode2.getChildren().length).toBe(1);
 });
 
-test('Expect parent node to have 3 total descendants', () => {
+test("Expect parent node to have 3 total descendants", () => {
     expect(parentNode.getTotalDescendantCount()).toBe(3);
 });
 
-test('Expect parent node to have 0 total descendants after cleanup', () => {
+test("Expect parent node to have 0 total descendants after cleanup", () => {
     parentNode.removeChildren();
     expect(parentNode.getTotalDescendantCount()).toBe(0);
 });
-
