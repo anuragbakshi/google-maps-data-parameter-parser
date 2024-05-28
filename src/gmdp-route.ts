@@ -7,9 +7,16 @@ export class GmdpRoute {
     route: GmdpWaypoint[] = [];
     transportation?: string;
     unit?: "km" | "miles";
+
+    arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
+    arrDepTime?: string;
+
     routePref?: "best route" | "fewer transfers" | "less walking";
-    arrDepTimeType?: "depart at" | "arrive by" | "last available";
     transitModePref: ("bus" | "subway" | "train" | "tram / light rail")[] = [];
+
+    avoidHighways = false;
+    avoidTolls = false;
+    avoidFerries = false;
 
     constructor() {}
 

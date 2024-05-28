@@ -1,4 +1,4 @@
-const Gmdp = require("../src/gmdp");
+import { Gmdp } from "../src/gmdp";
 
 test("Bad url", () => {
     // const g = new Gmdp('https://www.google.co.uk/maps/@50.938273,-1.3534897,10.75z?hl=en');
