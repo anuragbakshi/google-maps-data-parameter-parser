@@ -1,6 +1,7 @@
+import { test, expect } from "@jest/globals";
 import { PrBufNode } from "../src/prbufnode";
 
-const rootNode = PrBufNode.create("data=!1m4!1sa!1m1!2sb!1sc");
+const rootNode = PrBufNode.create("data=!1m4!1sa!1m1!2sb!1sc")!;
 
 test("Expects rootNode to be valid PrBufNode", () => {
     expect(rootNode).toBeInstanceOf(PrBufNode);

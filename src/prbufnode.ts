@@ -52,7 +52,7 @@ export class PrBufNode extends BasicNode<{
     /**
      * Parses the input URL 'data' protocol buffer parameter into a tree
      */
-    static create(urlToParse: string) {
+    static create(urlToParse: string): PrBufNode | null {
         let rootNode = null;
         let re = /data=!([^?&]+)/;
         let dataArray = urlToParse.match(re);

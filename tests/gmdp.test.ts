@@ -1,3 +1,4 @@
+import { test, expect } from "@jest/globals";
 import { Gmdp } from "../src/gmdp";
 
 test("Bad url", () => {

@@ -1,3 +1,4 @@
+import { test, expect } from "@jest/globals";
 import { BasicNode } from "../src/basic-node";
 
 const parentNode = new BasicNode();
