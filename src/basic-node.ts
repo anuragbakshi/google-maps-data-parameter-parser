@@ -1,13 +1,13 @@
-export class BasicNode {
-    children: BasicNode[] = [];
-    parent?: BasicNode;
+export class BasicNode<T> {
+    children: this[] = [];
+    parent?: this;
 
-    constructor(private val?: string) {}
+    constructor(public val?: T) {}
 
     /**
      * Sets the parent node of this node.
      */
-    setParentNode(node: BasicNode) {
+    setParentNode(node: this) {
         this.parent = node;
         node.children[node.children.length] = this;
     }
@@ -22,7 +22,7 @@ export class BasicNode {
     /**
      * Adds a child node of this node.
      */
-    addChild(node: BasicNode) {
+    addChild(node: this) {
         node.parent = this;
         this.children[this.children.length] = node;
     }

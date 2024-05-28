@@ -10,7 +10,7 @@ import { BasicNode } from "./basic-node";
  * @extends {BasicNode}
  * @constructor
  */
-const PrBufNode = function (id, type, value) {
+export const PrBufNode = function (id, type, value) {
     this.val = { id, type, value };
     this.children = [];
     this.parent = null;
@@ -81,4 +81,3 @@ PrBufNode.create = function (urlToParse) {
     }
     return rootNode;
 };
-module.exports = PrBufNode;

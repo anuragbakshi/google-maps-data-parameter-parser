@@ -1,4 +1,4 @@
-const PrBufNode = require("../src/prbufnode");
+import { PrBufNode } from "../src/prbufnode";
 
 const rootNode = PrBufNode.create("data=!1m4!1sa!1m1!2sb!1sc");
 

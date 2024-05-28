@@ -1,4 +1,4 @@
-const PrBufNode = require("./prbufnode");
+import { PrBufNode } from "./prbufnode";
 import { GmdpPoint } from "./gmdp-point";
 import { GmdpWaypoint } from "./gmdp-waypoint";
 const GmdpRoute = require("./gmdp-route");
