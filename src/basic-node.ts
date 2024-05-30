@@ -2,7 +2,7 @@ export class BasicNode<T> {
     children: this[] = [];
     parent?: this;
 
-    constructor(public val?: T) {}
+    constructor(public val: T) {}
 
     /**
      * Sets the parent node of this node.

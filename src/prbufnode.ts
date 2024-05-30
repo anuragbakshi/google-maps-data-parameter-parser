@@ -20,15 +20,15 @@ export class PrBufNode extends BasicNode<{
     }
 
     id() {
-        return this.val?.id;
+        return this.val.id;
     }
 
     type() {
-        return this.val?.type;
+        return this.val.type;
     }
 
     value() {
-        return this.val?.value;
+        return this.val.value;
     }
 
     /**
@@ -40,8 +40,8 @@ export class PrBufNode extends BasicNode<{
         //or if it's the root (identified by having a null parent), which has no element limit,
         //then return this node
         if (
-            (this.val?.type === "m" &&
-                this.val?.value > this.getTotalDescendantCount()) ||
+            (this.val.type === "m" &&
+                this.val.value > this.getTotalDescendantCount()) ||
             undefined === this.parent
         ) {
             return this;

@@ -1,10 +1,10 @@
 import { test, expect } from "@jest/globals";
 import { BasicNode } from "../src/basic-node";
 
-const parentNode = new BasicNode();
-const childNode1 = new BasicNode();
-const childNode2 = new BasicNode();
-const childNode3 = new BasicNode();
+const parentNode = new BasicNode(null);
+const childNode1 = new BasicNode(null);
+const childNode2 = new BasicNode(null);
+const childNode3 = new BasicNode(null);
 childNode1.setParentNode(parentNode);
 childNode2.setParentNode(parentNode);
 childNode3.setParentNode(childNode2);
