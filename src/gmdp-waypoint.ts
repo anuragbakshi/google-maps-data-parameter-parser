@@ -6,9 +6,20 @@
  * the coordinates have been specified in the URL path.
  */
 export class GmdpWaypoint {
+    lat?: number;
+    lng?: number;
+
     constructor(
-        private lat: number,
-        private lng: number,
+        lat: number | string | undefined,
+        lng: number | string | undefined,
         private primary: boolean
-    ) {}
+    ) {
+        if (lat !== undefined) {
+            this.lat = Number(lat);
+        }
+
+        if (lng !== undefined) {
+            this.lng = Number(lng);
+        }
+    }
 }

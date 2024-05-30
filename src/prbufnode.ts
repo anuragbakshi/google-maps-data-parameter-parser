@@ -3,20 +3,14 @@ import { BasicNode } from "./basic-node";
 /**
  * Protocol Buffer implementation, which extends the functionality of Node
  * while specifically typing the stored value
- *
- * @param {string|number} id
- * @param {string} type
- * @param {string} value
- * @extends {BasicNode}
- * @constructor
  */
 export class PrBufNode extends BasicNode<{
     id: number;
     type: string;
     value: string;
 }> {
-    constructor(id: string | number, type: string, value: string) {
-        super({ id: Number(id), type, value });
+    constructor(id: number, type: string, value: string) {
+        super({ id, type, value });
     }
 
     id() {
@@ -35,13 +29,13 @@ export class PrBufNode extends BasicNode<{
      * Compares the number of descendants with the value specified in the map element.
      * If all the children have not yet been added, we continue adding to this element.
      */
-    findLatestIncompleteNode() {
+    findLatestIncompleteNode(): this {
         //if it's a branch (map) node ('m') and has room,
         //or if it's the root (identified by having a null parent), which has no element limit,
         //then return this node
         if (
             (this.val.type === "m" &&
-                this.val.value > this.getTotalDescendantCount()) ||
+                Number(this.val.value) > this.getTotalDescendantCount()) ||
             undefined === this.parent
         ) {
             return this;

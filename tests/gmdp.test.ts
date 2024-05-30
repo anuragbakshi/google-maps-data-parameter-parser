@@ -72,8 +72,8 @@ test("Pin", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.pins).toHaveLength(1);
-    expect(g.pins[0].lat).toBe("59.6099005");
-    expect(g.pins[0].lng).toBe("16.5448091");
+    expect(g.pins[0].lat).toBe(59.6099005);
+    expect(g.pins[0].lng).toBe(16.5448091);
 });
 test("Transit, last available with prefs", () => {
     const g = new Gmdp(
