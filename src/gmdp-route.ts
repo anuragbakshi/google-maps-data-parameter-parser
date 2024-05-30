@@ -12,7 +12,7 @@ export class GmdpRoute {
         | "WALK"
         | "FLY"
         | { other: string };
-    unit?: "km" | "miles";
+    unit?: "METRIC" | "IMPERIAL";
 
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
     arrDepTime?: number;
@@ -74,10 +74,10 @@ export class GmdpRoute {
     setUnit(unit: string) {
         switch (unit) {
             case "0":
-                this.unit = "km";
+                this.unit = "METRIC";
                 break;
             case "1":
-                this.unit = "miles";
+                this.unit = "IMPERIAL";
                 break;
         }
     }

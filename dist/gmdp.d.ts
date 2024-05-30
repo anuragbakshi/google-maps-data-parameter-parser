@@ -83,7 +83,7 @@ declare class GmdpRoute {
     transportation?: "DRIVE" | "TRANSIT" | "BICYCLE" | "WALK" | "FLY" | {
         other: string;
     };
-    unit?: "km" | "miles";
+    unit?: "METRIC" | "IMPERIAL";
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
     arrDepTime?: number;
     routePref?: "best route" | "fewer transfers" | "less walking";
@@ -110,7 +110,7 @@ declare class GmdpRoute {
         other: string;
     } | undefined;
     setUnit(unit: string): void;
-    getUnit(): "km" | "miles" | undefined;
+    getUnit(): "METRIC" | "IMPERIAL" | undefined;
     setRoutePref(routePref: string): void;
     getRoutePref(): "best route" | "fewer transfers" | "less walking" | undefined;
     setArrDepTimeType(arrDepTimeType: string): void;

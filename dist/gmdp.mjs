@@ -185,10 +185,10 @@ var GmdpRoute = class {
   setUnit(unit) {
     switch (unit) {
       case "0":
-        this.unit = "km";
+        this.unit = "METRIC";
         break;
       case "1":
-        this.unit = "miles";
+        this.unit = "IMPERIAL";
         break;
     }
   }
