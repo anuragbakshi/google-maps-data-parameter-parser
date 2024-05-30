@@ -68,7 +68,6 @@ declare class GmdpPoint {
  * the coordinates have been specified in the URL path.
  */
 declare class GmdpWaypoint {
-    private primary;
     lat?: number;
     lng?: number;
     constructor(lat: number | string | undefined, lng: number | string | undefined, primary: boolean);
@@ -175,4 +174,4 @@ declare class Gmdp {
     } | undefined;
 }
 
-export { Gmdp };
+export { Gmdp, GmdpPoint, GmdpRoute, GmdpWaypoint };

@@ -121,7 +121,6 @@ var GmdpPoint = class {
 // src/gmdp-waypoint.ts
 var GmdpWaypoint = class {
   constructor(lat, lng, primary) {
-    this.primary = primary;
     if (lat !== void 0) {
       this.lat = Number(lat);
     }
@@ -530,7 +529,10 @@ var Gmdp = class {
   }
 };
 export {
-  Gmdp
+  Gmdp,
+  GmdpPoint,
+  GmdpRoute,
+  GmdpWaypoint
 };
 //!2e4!3e11 indicates a photosphere, rather than standard streetview
 //# sourceMappingURL=gmdp.mjs.map

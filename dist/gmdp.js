@@ -20,7 +20,10 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/gmdp.ts
 var gmdp_exports = {};
 __export(gmdp_exports, {
-  Gmdp: () => Gmdp
+  Gmdp: () => Gmdp,
+  GmdpPoint: () => GmdpPoint,
+  GmdpRoute: () => GmdpRoute,
+  GmdpWaypoint: () => GmdpWaypoint
 });
 module.exports = __toCommonJS(gmdp_exports);
 
@@ -147,7 +150,6 @@ var GmdpPoint = class {
 // src/gmdp-waypoint.ts
 var GmdpWaypoint = class {
   constructor(lat, lng, primary) {
-    this.primary = primary;
     if (lat !== void 0) {
       this.lat = Number(lat);
     }
@@ -557,7 +559,10 @@ var Gmdp = class {
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  Gmdp
+  Gmdp,
+  GmdpPoint,
+  GmdpRoute,
+  GmdpWaypoint
 });
 //!2e4!3e11 indicates a photosphere, rather than standard streetview
 //# sourceMappingURL=gmdp.js.map
