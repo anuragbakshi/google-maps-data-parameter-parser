@@ -55,7 +55,7 @@ export class PrBufNode extends BasicNode<{
             dataArray = urlToParse.match(re);
         }
         if (dataArray && dataArray.length >= 1) {
-            rootNode = new PrBufNode();
+            rootNode = new PrBufNode(0, "root", "root");
             let workingNode = rootNode;
             //we iterate through each of the elements, creating a node for it, and
             //deciding where to place it in the tree
