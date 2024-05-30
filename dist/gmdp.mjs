@@ -199,13 +199,13 @@ var GmdpRoute = class {
     switch (routePref) {
       case "0":
       case "1":
-        this.routePref = "best route";
+        this.routePref = "BEST_ROUTE";
         break;
       case "2":
-        this.routePref = "fewer transfers";
+        this.routePref = "FEWER_TRANSFERS";
         break;
       case "3":
-        this.routePref = "less walking";
+        this.routePref = "LESS_WALKING";
         break;
     }
   }

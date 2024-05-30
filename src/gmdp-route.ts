@@ -17,7 +17,7 @@ export class GmdpRoute {
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
     arrDepTime?: number;
 
-    routePref?: "best route" | "fewer transfers" | "less walking";
+    routePref?: "BEST_ROUTE" | "FEWER_TRANSFERS" | "LESS_WALKING";
     transitModePref: ("bus" | "subway" | "train" | "tram / light rail")[] = [];
 
     avoidHighways = false;
@@ -90,13 +90,13 @@ export class GmdpRoute {
         switch (routePref) {
             case "0":
             case "1":
-                this.routePref = "best route";
+                this.routePref = "BEST_ROUTE";
                 break;
             case "2":
-                this.routePref = "fewer transfers";
+                this.routePref = "FEWER_TRANSFERS";
                 break;
             case "3":
-                this.routePref = "less walking";
+                this.routePref = "LESS_WALKING";
                 break;
         }
     }

@@ -81,7 +81,7 @@ test("Transit, last available with prefs", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getRoute()?.getTransitModePref()).toHaveLength(2);
-    expect(g.getRoute()?.getRoutePref()).toBe("fewer transfers");
+    expect(g.getRoute()?.getRoutePref()).toBe("FEWER_TRANSFERS");
     expect(g.getRoute()?.getUnit()).toBe("IMPERIAL");
     expect(g.getRoute()?.getArrDepTimeType()).toBe("last available");
 });

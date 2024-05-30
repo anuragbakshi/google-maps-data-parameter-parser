@@ -86,7 +86,7 @@ declare class GmdpRoute {
     unit?: "METRIC" | "IMPERIAL";
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
     arrDepTime?: number;
-    routePref?: "best route" | "fewer transfers" | "less walking";
+    routePref?: "BEST_ROUTE" | "FEWER_TRANSFERS" | "LESS_WALKING";
     transitModePref: ("bus" | "subway" | "train" | "tram / light rail")[];
     avoidHighways: boolean;
     avoidTolls: boolean;
@@ -112,7 +112,7 @@ declare class GmdpRoute {
     setUnit(unit: string): void;
     getUnit(): "METRIC" | "IMPERIAL" | undefined;
     setRoutePref(routePref: string): void;
-    getRoutePref(): "best route" | "fewer transfers" | "less walking" | undefined;
+    getRoutePref(): "BEST_ROUTE" | "FEWER_TRANSFERS" | "LESS_WALKING" | undefined;
     setArrDepTimeType(arrDepTimeType: string): void;
     getArrDepTimeType(): "depart at" | "arrive by" | "last available" | "leave now" | undefined;
     addTransitModePref(transitModePref: string): void;
