@@ -504,7 +504,7 @@ var Gmdp = class {
             route.setArrDepTimeType(routeOption.value());
           }
           if (routeOption.id() === 8 && routeOption.type() === "j") {
-            route.arrDepTime = routeOption.value();
+            route.arrDepTime = Number(routeOption.value());
           }
         }
       } else if (primaryChild.id() === 3 && primaryChild.type() === "e") {

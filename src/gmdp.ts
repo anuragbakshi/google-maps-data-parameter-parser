@@ -297,7 +297,7 @@ export class Gmdp {
                         route.setArrDepTimeType(routeOption.value());
                     }
                     if (routeOption.id() === 8 && routeOption.type() === "j") {
-                        route.arrDepTime = routeOption.value(); //as a unix timestamp
+                        route.arrDepTime = Number(routeOption.value()); //as a unix timestamp
                     }
                 }
             } else if (primaryChild.id() === 3 && primaryChild.type() === "e") {

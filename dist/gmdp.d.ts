@@ -85,7 +85,7 @@ declare class GmdpRoute {
     };
     unit?: "km" | "miles";
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
-    arrDepTime?: string;
+    arrDepTime?: number;
     routePref?: "best route" | "fewer transfers" | "less walking";
     transitModePref: ("bus" | "subway" | "train" | "tram / light rail")[];
     avoidHighways: boolean;
