@@ -15,7 +15,7 @@ test("Basic route", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute()?.getTransportation()).toBe("car");
+    expect(g.getRoute()?.getTransportation()).toBe("DRIVE");
     expect(g.getRoute()?.getAllWaypoints()).toHaveLength(3);
     expect(g.getRoute()?.getUnit()).toBe(undefined); // no unit defined in params
 });
@@ -25,7 +25,7 @@ test("Basic route (transit)", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute()?.getTransportation()).toBe("transit");
+    expect(g.getRoute()?.getTransportation()).toBe("TRANSIT");
     expect(g.getRoute()?.getAllWaypoints()).toHaveLength(2);
 });
 test("Basic route (bike)", () => {
@@ -34,7 +34,7 @@ test("Basic route (bike)", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute()?.getTransportation()).toBe("bike");
+    expect(g.getRoute()?.getTransportation()).toBe("BICYCLE");
     expect(g.getRoute()?.getAllWaypoints()).toHaveLength(3);
 });
 test("Basic route (foot)", () => {
@@ -43,7 +43,7 @@ test("Basic route (foot)", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute()?.getTransportation()).toBe("foot");
+    expect(g.getRoute()?.getTransportation()).toBe("WALK");
     expect(g.getRoute()?.getAllWaypoints()).toHaveLength(3);
 });
 test("Route with secondary waypoints", () => {

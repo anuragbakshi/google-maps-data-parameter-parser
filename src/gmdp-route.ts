@@ -5,7 +5,13 @@ import { GmdpWaypoint } from "./gmdp-waypoint";
  */
 export class GmdpRoute {
     route: GmdpWaypoint[] = [];
-    transportation?: string;
+    transportation?:
+        | "DRIVE"
+        | "TRANSIT"
+        | "BICYCLE"
+        | "WALK"
+        | "FLY"
+        | { other: string };
     unit?: "km" | "miles";
 
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
@@ -38,22 +44,22 @@ export class GmdpRoute {
     setTransportation(transportation: string) {
         switch (transportation) {
             case "0":
-                this.transportation = "car";
+                this.transportation = "DRIVE";
                 break;
             case "1":
-                this.transportation = "bike";
+                this.transportation = "BICYCLE";
                 break;
             case "2":
-                this.transportation = "foot";
+                this.transportation = "WALK";
                 break;
             case "3":
-                this.transportation = "transit";
+                this.transportation = "TRANSIT";
                 break;
             case "4":
-                this.transportation = "flight";
+                this.transportation = "FLY";
                 break;
             default:
-                this.transportation = transportation;
+                this.transportation = { other: transportation };
                 break;
         }
     }

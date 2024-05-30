@@ -80,7 +80,9 @@ declare class GmdpWaypoint {
  */
 declare class GmdpRoute {
     route: GmdpWaypoint[];
-    transportation?: string;
+    transportation?: "DRIVE" | "TRANSIT" | "BICYCLE" | "WALK" | "FLY" | {
+        other: string;
+    };
     unit?: "km" | "miles";
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
     arrDepTime?: string;
@@ -104,7 +106,9 @@ declare class GmdpRoute {
     /**
      * Returns the mode of transportation (if any) for the route.
      */
-    getTransportation(): string | undefined;
+    getTransportation(): "DRIVE" | "TRANSIT" | "BICYCLE" | "WALK" | "FLY" | {
+        other: string;
+    } | undefined;
     setUnit(unit: string): void;
     getUnit(): "km" | "miles" | undefined;
     setRoutePref(routePref: string): void;
