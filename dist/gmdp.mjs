@@ -121,6 +121,7 @@ var GmdpPoint = class {
 // src/gmdp-waypoint.ts
 var GmdpWaypoint = class {
   constructor(lat, lng, primary) {
+    this.primary = primary;
     if (lat !== void 0) {
       this.lat = Number(lat);
     }

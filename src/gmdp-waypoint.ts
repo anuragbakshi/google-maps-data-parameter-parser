@@ -12,7 +12,7 @@ export class GmdpWaypoint {
     constructor(
         lat: number | string | undefined,
         lng: number | string | undefined,
-        primary: boolean
+        public primary: boolean
     ) {
         if (lat !== undefined) {
             this.lat = Number(lat);
