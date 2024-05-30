@@ -359,3 +359,7 @@ export class Gmdp {
         return this.localSearchMap;
     }
 }
+
+export { GmdpPoint } from "./gmdp-point";
+export { GmdpWaypoint } from "./gmdp-waypoint";
+export { GmdpRoute } from "./gmdp-route";
