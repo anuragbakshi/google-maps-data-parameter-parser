@@ -12,5 +12,5 @@
     "scripts": {
         "test": "jest"
     },
-    "main": "src/gmdp.js"
+    "main": "src/gmdp.ts"
 }
