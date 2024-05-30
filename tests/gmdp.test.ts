@@ -15,9 +15,9 @@ test("Basic route", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute().getTransportation()).toBe("car");
-    expect(g.getRoute().getAllWaypoints()).toHaveLength(3);
-    expect(g.getRoute().getUnit()).toBe(undefined); // no unit defined in params
+    expect(g.getRoute()?.getTransportation()).toBe("car");
+    expect(g.getRoute()?.getAllWaypoints()).toHaveLength(3);
+    expect(g.getRoute()?.getUnit()).toBe(undefined); // no unit defined in params
 });
 test("Basic route (transit)", () => {
     const g = new Gmdp(
@@ -25,8 +25,8 @@ test("Basic route (transit)", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute().getTransportation()).toBe("transit");
-    expect(g.getRoute().getAllWaypoints()).toHaveLength(2);
+    expect(g.getRoute()?.getTransportation()).toBe("transit");
+    expect(g.getRoute()?.getAllWaypoints()).toHaveLength(2);
 });
 test("Basic route (bike)", () => {
     const g = new Gmdp(
@@ -34,8 +34,8 @@ test("Basic route (bike)", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute().getTransportation()).toBe("bike");
-    expect(g.getRoute().getAllWaypoints()).toHaveLength(3);
+    expect(g.getRoute()?.getTransportation()).toBe("bike");
+    expect(g.getRoute()?.getAllWaypoints()).toHaveLength(3);
 });
 test("Basic route (foot)", () => {
     const g = new Gmdp(
@@ -43,15 +43,15 @@ test("Basic route (foot)", () => {
     );
     expect(g).toBeInstanceOf(Gmdp);
     expect(g.getMapType()).toBe("map");
-    expect(g.getRoute().getTransportation()).toBe("foot");
-    expect(g.getRoute().getAllWaypoints()).toHaveLength(3);
+    expect(g.getRoute()?.getTransportation()).toBe("foot");
+    expect(g.getRoute()?.getAllWaypoints()).toHaveLength(3);
 });
 test("Route with secondary waypoints", () => {
     const g = new Gmdp(
         "https://www.google.co.uk/maps/dir/Stockport+Town+Hall,+Stockport/53.4792175,-1.644872/53.4132379,-1.8360711/Stockport+Town+Hall,+Stockport/@53.4346254,-2.1105324,10.25z/data=!4m26!4m25!1m10!1m1!1s0x487bb37cf3465a99:0x9a665518e24e66a5!2m2!1d-2.1584868!2d53.4060755!3m4!1m2!1d-2.0792622!2d53.4508176!3s0x487bb5dd7e9ecd2f:0x1f85a3230047b373!1m0!1m5!3m4!1m2!1d-2.0740076!2d53.3962551!3s0x487bb56ae9752e19:0xca4165d9cbdd4a1c!1m5!1m1!1s0x487bb37cf3465a99:0x9a665518e24e66a5!2m2!1d-2.1584868!2d53.4060755!3e1?hl=en"
     );
     expect(g).toBeInstanceOf(Gmdp);
-    expect(g.getRoute().getAllWaypoints()).toHaveLength(6);
+    expect(g.getRoute()?.getAllWaypoints()).toHaveLength(6);
 });
 test("Streetview", () => {
     const g = new Gmdp(
@@ -80,8 +80,8 @@ test("Transit, last available with prefs", () => {
         "https://www.google.co.uk/maps/dir/Versailles,+France/Cr%25C3%25A9teil,+France/@48.8053495,2.1524205,11z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0x47e67db475f420bd:0x869e00ad0d844aba!2m2!1d2.130122!2d48.801408!1m5!1m1!1s0x47e60caf330272df:0x4573b9315445d467!2m2!1d2.455572!2d48.790367!2m4!4e2!5e0!5e3!6e2!3e3!4e1"
     );
     expect(g).toBeInstanceOf(Gmdp);
-    expect(g.getRoute().getTransitModePref()).toHaveLength(2);
-    expect(g.getRoute().getRoutePref()).toBe("fewer transfers");
-    expect(g.getRoute().getUnit()).toBe("miles");
-    expect(g.getRoute().getArrDepTimeType()).toBe("last available");
+    expect(g.getRoute()?.getTransitModePref()).toHaveLength(2);
+    expect(g.getRoute()?.getRoutePref()).toBe("fewer transfers");
+    expect(g.getRoute()?.getUnit()).toBe("miles");
+    expect(g.getRoute()?.getArrDepTimeType()).toBe("last available");
 });
