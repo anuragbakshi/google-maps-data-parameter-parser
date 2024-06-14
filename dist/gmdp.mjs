@@ -231,16 +231,16 @@ var GmdpRoute = class {
   addTransitModePref(transitModePref) {
     switch (transitModePref) {
       case "0":
-        this.transitModePref.push("bus");
+        this.transitModePref.push("BUS");
         break;
       case "1":
-        this.transitModePref.push("subway");
+        this.transitModePref.push("SUBWAY");
         break;
       case "2":
-        this.transitModePref.push("train");
+        this.transitModePref.push("TRAIN");
         break;
       case "3":
-        this.transitModePref.push("tram / light rail");
+        this.transitModePref.push("LIGHT_RAIL");
         break;
     }
   }

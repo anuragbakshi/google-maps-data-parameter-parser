@@ -87,7 +87,7 @@ declare class GmdpRoute {
     arrDepTimeType?: "depart at" | "arrive by" | "last available" | "leave now";
     arrDepTime?: number;
     routePref?: "BEST_ROUTE" | "FEWER_TRANSFERS" | "LESS_WALKING";
-    transitModePref: ("bus" | "subway" | "train" | "tram / light rail")[];
+    transitModePref: ("BUS" | "SUBWAY" | "TRAIN" | "LIGHT_RAIL")[];
     avoidHighways: boolean;
     avoidTolls: boolean;
     avoidFerries: boolean;
@@ -120,7 +120,7 @@ declare class GmdpRoute {
      *
      * @returns {string[]}
      */
-    getTransitModePref(): ("bus" | "subway" | "train" | "tram / light rail")[];
+    getTransitModePref(): ("BUS" | "SUBWAY" | "TRAIN" | "LIGHT_RAIL")[];
     /**
      * Returns the list of all waypoints belonging to this route.
      * @returns {GmdpWaypoint[]}
